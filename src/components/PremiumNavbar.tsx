@@ -16,19 +16,24 @@ export default function PremiumNavbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <span className="font-semibold tracking-wide">
-          Maati Living Community
-        </span>
+    <nav className="fixed top-0 w-full z-50 bg-[#fafaf9]/85 backdrop-blur-md border-b border-stone-200/70 transition-all">
+      <div className="max-w-7xl mx-auto px-6 h-18 flex items-center justify-between">
+        <a href="#home" className="flex items-center gap-2 group">
+          <span className="font-display text-2xl font-semibold tracking-tight text-stone-900 group-hover:text-stone-700 transition">
+            Maati Living
+          </span>
+          <span className="hidden sm:inline font-mono text-[10px] uppercase tracking-widest text-stone-400 pl-2 border-l border-stone-300">
+            Mukteshwar
+          </span>
+        </a>
 
-        {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8 text-sm">
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-8 text-xs font-mono tracking-widest uppercase text-stone-600">
           {NAV_ITEMS.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="text-gray-700 hover:text-black transition"
+              className="hover:text-stone-950 transition-colors duration-150"
             >
               {item.label}
             </a>
@@ -40,18 +45,19 @@ export default function PremiumNavbar() {
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-black text-white px-5 py-2 rounded-full"
+            className="bg-stone-900 text-stone-50 px-5 py-2.5 rounded-full text-xs font-sans tracking-wide hover:bg-stone-800 transition-all duration-200"
           >
-            Book Now
+            Reserve Stay
           </a>
         </div>
 
         {/* Mobile Button */}
         <button
-          className="md:hidden text-xl"
+          className="md:hidden text-lg p-2 text-stone-800 focus:outline-none"
           onClick={() => setOpen(!open)}
+          aria-label="Toggle navigation menu"
         >
-          ☰
+          {open ? "✕" : "☰"}
         </button>
       </div>
 

@@ -17,17 +17,17 @@ export default function NatureGallery() {
     setActiveIndex((i) => (i! === images.length - 1 ? 0 : i! + 1));
 
   return (
-    <section id="gallery" className="py-32 px-6 bg-white">
+    <section id="gallery" className="py-32 px-6 sm:px-12 bg-[#fafaf9] border-b border-stone-200/70">
       {/* HEADING */}
-      <div className="max-w-6xl mx-auto mb-16 text-center">
-        <span className="uppercase text-xs tracking-widest text-gray-400">
-          Nature & Surroundings
+      <div className="max-w-4xl mx-auto mb-16 text-center">
+        <span className="font-mono text-xs uppercase tracking-widest text-stone-400 block mb-3">
+          04 / NATURE & STILLNESS
         </span>
-        <h2 className="text-4xl font-semibold mt-4 mb-4">
+        <h2 className="text-4xl sm:text-5xl font-display font-medium text-stone-900 mb-4">
           Wake Up With Nature
         </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
-          Click on any moment to explore the landscapes around Maati Living.
+        <p className="text-stone-600 max-w-xl mx-auto text-base font-light">
+          Mist rolling over cedar ridges, sunlit pine needles, and unfiltered tranquility. Click any photograph to expand the view.
         </p>
       </div>
 

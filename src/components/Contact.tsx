@@ -17,36 +17,37 @@ Could you please help me?`;
   return (
     <motion.section
       id="contact"
-      initial={{ opacity: 0, y: 60 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 1 }}
-      className="py-28 px-6 text-center bg-neutral-50"
+      transition={{ duration: 0.9 }}
+      className="py-32 px-6 sm:px-12 text-center bg-[#fafaf9] border-b border-stone-200/70"
     >
-      <p className="text-sm uppercase tracking-widest text-gray-400 mb-4">
-        No Pressure
-      </p>
+      <span className="font-mono text-xs uppercase tracking-widest text-stone-400 block mb-4">
+        06 / CONVERSATIONS & INQUIRIES
+      </span>
 
-      <h2 className="text-3xl md:text-4xl font-semibold mb-6">
+      <h2 className="text-4xl sm:text-5xl font-display font-medium text-stone-900 mb-6">
         Still Have Questions?
       </h2>
 
-      <p className="text-gray-600 max-w-xl mx-auto mb-10">
-        Whether it’s about the stay, food, accessibility, or something specific —
-        just ask. A real person will reply.
+      <p className="text-stone-600 max-w-xl mx-auto mb-10 text-base font-light leading-relaxed">
+        Whether about mountain road conditions, seasonal weather, curated dining, or special stay requests — reach out anytime. A host from the community will respond directly.
       </p>
 
       <button
         onClick={handleWhatsApp}
         className="
-          inline-flex items-center gap-2
-          border border-black
-          px-8 py-3 rounded-full
-          hover:bg-black hover:text-white
-          transition
+          inline-flex items-center gap-3
+          bg-white border border-stone-300
+          text-stone-900 px-8 py-3.5 rounded-full
+          text-xs font-mono uppercase tracking-wider
+          hover:bg-stone-900 hover:text-white hover:border-stone-900
+          transition-all duration-200 shadow-sm
         "
       >
-        Chat on WhatsApp
+        <span>Message Us on WhatsApp</span>
+        <span>→</span>
       </button>
     </motion.section>
   );

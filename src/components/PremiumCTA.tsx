@@ -17,73 +17,37 @@ Please share the availability and details.`;
 
   return (
     <motion.section
-      initial={{ opacity: 0, y: 80 }}
+      initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 1.2, ease: "easeOut" }}
-      className="relative py-36 px-6 text-center overflow-hidden"
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="relative py-36 px-6 sm:px-12 text-center bg-[#fafaf9] border-b border-stone-200/70"
     >
-      {/* SOFT BACKGROUND GLOW */}
-      <div className="absolute inset-0 flex justify-center">
-        <div className="w-[500px] h-[500px] bg-black/5 rounded-full blur-3xl" />
-      </div>
-
-      {/* CONTENT */}
       <div className="relative z-10 max-w-3xl mx-auto">
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 1 }}
-          className="text-sm uppercase tracking-widest text-gray-400 mb-6"
-        >
-          A Gentle Reminder
-        </motion.p>
+        <span className="font-mono text-xs uppercase tracking-widest text-stone-400 block mb-6">
+          05 / A GENTLE INVITATION
+        </span>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 1 }}
-          className="text-4xl md:text-5xl font-semibold mb-6 leading-tight"
-        >
-          You don’t need another vacation.
-          <br />
-          You need a pause.
-        </motion.h2>
+        <h2 className="text-4xl sm:text-6xl font-display font-medium text-stone-900 mb-6 leading-[1.1] tracking-tight">
+          You don’t need another vacation. <br />
+          <span className="italic font-normal">You need a pause.</span>
+        </h2>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.6, duration: 1 }}
-          className="text-gray-600 mb-12 max-w-xl mx-auto"
-        >
+        <p className="text-stone-600 mb-10 max-w-xl mx-auto text-base sm:text-lg font-light leading-relaxed">
           Step away from the noise. Slow down your mornings.
-          Let nature reset the rhythm of your days.
-        </motion.p>
+          Let the deodar pines reset the natural cadence of your days.
+        </p>
 
-        {/* CTA BUTTON */}
-        <motion.button
+        <button
           onClick={handleClick}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.96 }}
           className="
-            relative bg-black text-white
-            px-12 py-4 rounded-full text-lg font-medium
-            overflow-hidden
+            bg-stone-900 text-stone-50
+            px-10 py-4 rounded-full text-xs font-mono uppercase tracking-widest
+            hover:bg-stone-800 transition-colors duration-200 shadow-sm
           "
         >
-          <span className="relative z-10">
-            Begin Your Stay
-          </span>
-
-          {/* BUTTON GLOW */}
-          <span
-            className="
-              absolute inset-0 bg-white/10
-              opacity-0 hover:opacity-100
-              transition
-            "
-          />
-        </motion.button>
+          Begin Your Stay On WhatsApp →
+        </button>
       </div>
     </motion.section>
   );
